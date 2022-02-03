@@ -1,10 +1,10 @@
 {
   "version": "1.0.0",
-  "name": "solarized-dark-syntax",
-  "description": "Solarlized Dark",
+  "name": "plastic-syntax",
+  "description": "Plastic Syntax Theme",
   "theme": "syntax",
   "styleSheets": [
-    "solarized.less"
+    "plastic.less"
   ],
   "engines": {
     "inkdrop": "^5.x"
