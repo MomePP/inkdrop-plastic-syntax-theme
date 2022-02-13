@@ -1,6 +1,6 @@
 /*
-Plastic Colors palette
-http://ethanschoonover.com/solarized/img/solarized-palette.png
+Plastic colors palette
+https://plastictheme.com/palette
 */
 
 @import "./colors";
@@ -12,33 +12,41 @@ http://ethanschoonover.com/solarized/img/solarized-palette.png
   .CodeMirror {
     color-profile: sRGB;
     rendering-intent: auto;
-    color: @base05;
-    background-color: @base00;
+    color: @base06;
+    background-color: @base01;
     text-shadow: @base00 0 1px;
+    
+    .cm-formatting-list.cm-keyword { color: @base-blue; }
+    .cm-formatting-list.cm-variable-2 { color: @base-red; }
+    .cm-formatting-list.cm-variable-3 { color: @base-orange; }
+    .cm-formatting-list-ul.cm-keyword { color: @base-blue; }
+    .cm-formatting-list-ul.cm-variable-2 { color: @base-red; }
+    .cm-formatting-list-ul.cm-variable-3 { color: @base-orange; }
 
     .cm-header { color: @base-yellow; }
-    .cm-quote { color: @base03; font-style: italic; }
+    .cm-quote { color: @base07; font-style: italic; }
 
-    .cm-keyword, .cm-formatting-list.cm-variable-2 { color: @base-orange; }
-    .cm-atom, .cm-formatting-list.cm-variable-3 { color: @base-magenta; }
-    .cm-number { color: @base-magenta; }
-    .cm-def { color: @base-cyan; }
+    .cm-keyword { color: @base-blue; }
+    .cm-atom { color: @base-violet; }
+    .cm-number { color: @base-cyan; }
+    .cm-def { color: @base-violet; }
+    .cm-type { color: @base-blue; }
 
-    .cm-variable { color: @base04; }
-    .cm-variable-2 { color: @base-yellow; }
-    .cm-variable-3 { color: @base-violet; }
+    .cm-variable { color: @base07; }
+    // .cm-variable-2 { color: @base06; }
+    .cm-variable-3 { color: @base-orange; }
 
     .cm-property { color: @base-cyan; }
-    .cm-operator { color: @base-violet; }
+    .cm-operator { color: @base-red; }
 
-    .cm-comment { color: @base03; font-style:italic; }
+    .cm-comment { color: @base05; font-style:italic; }
 
     .cm-string { color: @base-green; }
     .cm-string-2 { color: @base-yellow; }
 
-    .cm-meta { color: @base-green; }
+    .cm-meta { color: @base-red; }
     .cm-qualifier { color: @base-yellow; }
-    .cm-builtin { color: @base-magenta; }
+    .cm-builtin { color: @base-violet; }
     .cm-bracket { color: @base-orange; }
     .CodeMirror-matchingbracket {
       color: @base-green !important;
@@ -47,7 +55,7 @@ http://ethanschoonover.com/solarized/img/solarized-palette.png
     .CodeMirror-nonmatchingbracket {
       color: @base-red !important;
     }
-    .cm-tag { color: @base05; }
+    .cm-tag { color: @base-cyan; }
     .cm-attribute { color: @base-cyan; }
 
     .CodeMirror-widget {
@@ -55,8 +63,14 @@ http://ethanschoonover.com/solarized/img/solarized-palette.png
     }
 
     .cm-hr { color: @base-yellow; }
-    .cm-link, .cm-url {
+    .cm-link {
       color: @base-cyan;
+      text-decoration: none;
+    }
+    .cm-formatting-link.cm-link { color: @base06; }
+    .cm-url {
+      color: @base07;
+      text-decoration: underline;
       text-underline-position: under;
     }
     .cm-special { color: @base-violet; }
@@ -90,7 +104,7 @@ http://ethanschoonover.com/solarized/img/solarized-palette.png
 
     .cm-inline-code {
       background: rgba(255, 255, 255, 0.04);
-      color: @base03;
+      color: @base-green;
     }
 
     .gfm-codeblock-bg.CodeMirror-linebackground {
@@ -98,11 +112,11 @@ http://ethanschoonover.com/solarized/img/solarized-palette.png
     }
 
     .cm-table-sep, .table-row.table-row-1 {
-      color: @base-violet;
+      color: @base-magenta;
     }
   }
 
-  .CodeMirror div.CodeMirror-selected { background: @base01; }
+  .CodeMirror div.CodeMirror-selected { background: @base03; }
   .CodeMirror.CodeMirror ::selection { background: rgba(7, 54, 66, 0.99); }
   .CodeMirror .CodeMirror-line::-moz-selection,  .CodeMirror-line > span::-moz-selection,  .CodeMirror-line > span > span::-moz-selection { background: rgba(7, 54, 66, 0.99); }
 
@@ -136,7 +150,7 @@ http://ethanschoonover.com/solarized/img/solarized-palette.png
 
   /* Common */
   .CodeMirror .CodeMirror-linenumber {
-    color: @base02;
+    color: @base04;
     padding: 0 5px;
   }
   .CodeMirror .CodeMirror-guttermarker-subtle { color: @base02; }
@@ -146,7 +160,9 @@ http://ethanschoonover.com/solarized/img/solarized-palette.png
     color: @base02;
   }
 
-  .CodeMirror .CodeMirror-cursor { border-left: 1px solid #819090; }
+  .CodeMirror .CodeMirror-cursor { border-left: 1px solid #819090; background-color: #A5A4A480 !important; }
+  .CodeMirror .CodeMirror-cursors { background-color: #A5A4A480 !important; }
+  .CodeMirror .cm-animate-fat-cursor { background-color: #A5A4A480 !important; }
 
   /*
   Active line. Negative margin compensates left padding of the text in the
@@ -156,7 +172,7 @@ http://ethanschoonover.com/solarized/img/solarized-palette.png
     background: rgba(255, 255, 255, 0.10) !important;
   }
   .CodeMirror-activeline .CodeMirror-linenumber {
-    color: @base06;
+    color: @base07;
   }
 
   .cm-formatting-header {
