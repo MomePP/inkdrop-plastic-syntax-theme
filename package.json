@@ -8,5 +8,9 @@
   ],
   "engines": {
     "inkdrop": "^5.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MomePP/inkdrop-plastic-syntax-theme"
   }
 }
